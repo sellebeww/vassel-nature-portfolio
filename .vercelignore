@@ -1,0 +1,10 @@
+# Retired source files and local working material are not part of the website.
+archive/
+.agents/
+.codex/
+.git/
+.next/
+node_modules/
+*.tsbuildinfo
+.DS_Store
+.env*

@@ -1,0 +1,102 @@
+.experience-collection { scroll-margin-top: 110px; margin-top: 38px; }
+.experience-collection-top, .experience-collection-bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.experience-collection-top { margin-bottom: 18px; }
+.experience-collection-top>span:last-child, .experience-collection-hint { font-size: 12px; color: var(--muted); }
+.experience-cards.is-drifting { display: flex; gap: 24px; overflow-x: auto; overscroll-behavior-x: contain; padding: 5px 2px 22px; scrollbar-width: thin; scrollbar-color: var(--forest-line) transparent; touch-action: pan-x pan-y; }
+.experience-cards.is-drifting .experience-card { flex: 0 0 390px; }
+.experience-cards[data-dragging='true'], .experience-cards[data-dragging='true'] * { cursor: grabbing; user-select: none; }
+.experience-card { min-width: 0; display: flex; flex-direction: column; background: color-mix(in srgb,var(--midnight) 93%,transparent); border: 1px solid var(--forest-line); border-radius: 5px; overflow: hidden; }
+.experience-cover { display: block; position: relative; width: 100%; aspect-ratio: 3/2; overflow: hidden; background: var(--deep-navy); }
+.experience-photo-carousel { min-width: 0; }
+.experience-photo-track { display: flex; overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; touch-action: pan-x pan-y; scroll-snap-type: x mandatory; }
+.experience-photo-track::-webkit-scrollbar { display: none; }
+.experience-photo-slide { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; scroll-snap-stop: always; }
+.experience-photo-track[data-dragging='true'], .experience-photo-track[data-sliding='true'] { scroll-snap-type: none; }
+.experience-photo-track[data-dragging='true'], .experience-photo-track[data-dragging='true'] * { cursor: grabbing; user-select: none; }
+.experience-photo-controls { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 4px 14px; min-height: 40px; border-bottom: 1px solid var(--forest-line); }
+.experience-photo-position { font-size: 10px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.experience-photo-dots { display: flex; margin-left: auto; }
+.experience-photo-dots button { display: grid; place-items: center; width: 26px; height: 32px; }
+.experience-photo-dots button span { width: 4px; height: 4px; border-radius: 8px; background: var(--cream); opacity: .25; transition: width .2s, opacity .2s; }
+.experience-photo-dots button[aria-current='true'] span { width: 14px; opacity: .85; }
+.experience-photo-pause { display: grid; place-items: center; width: 32px; height: 32px; border-left: 1px solid var(--forest-line); }
+.experience-card-text { border-top: 3px solid color-mix(in srgb,var(--cream) 35%,transparent); }
+.experience-cover-backdrop { object-fit: cover; filter: blur(20px) brightness(.65); transform: scale(1.12); opacity: .7; }
+.experience-cover-image, .archive-photo-image { object-fit: contain; }
+.experience-photo-count, .experience-cover-open { position: absolute; bottom: 12px; display: flex; gap: 7px; align-items: center; padding: 8px 10px; background: rgba(16,24,25,.85); color: #f4f5ee; font-size: 11px; border-radius: 3px; }
+.experience-photo-count { left: 12px; }
+.experience-cover-open { right: 12px; padding: 7px; }
+.experience-card-copy { padding: 22px; display: flex; flex: 1; flex-direction: column; }
+.experience-card-meta { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; font-size: 10px; line-height: 1.7; color: var(--muted); }
+.experience-card-meta>span:first-child { text-transform: uppercase; letter-spacing: .09em; }
+.experience-card-meta>span:last-child:not(:first-child) { text-align: right; }
+.experience-card-copy h3 { font-size: 29px; line-height: 1.15; letter-spacing: -.035em; margin-top: 16px; }
+.experience-card-role { font-size: 14px; font-weight: 600; line-height: 1.6; color: var(--cream); margin-top: 10px; }
+.experience-card-description { font-size: 13px; line-height: 1.8; color: var(--muted); margin-top: 14px; }
+.experience-card-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 24px; }
+.experience-card-thumbnails { display: flex; gap: 6px; }
+.experience-card-thumbnails :is(button,a) { position: relative; display: block; width: 46px; height: 44px; border: 1px solid var(--forest-line); background: var(--deep-navy); border-radius: 3px; overflow: hidden; }
+.experience-card-thumbnails a svg { position: absolute; bottom: 2px; right: 2px; padding: 2px; box-sizing: content-box; background: #17201b; color: #fff; border-radius: 3px; }
+.experience-detail-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 13px; border: 1px solid var(--forest-line); border-radius: 3px; font-size: 12px; margin-left: auto; }
+.experience-collection-bottom { margin-top: 18px; flex-wrap: wrap; }
+.experience-rail-controls { display: flex; align-items: center; gap: 6px; margin-right: auto; }
+.experience-rail-controls button { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--forest-line); border-radius: 50%; }
+.experience-more { display: inline-flex; align-items: center; justify-content: center; gap: 18px; padding: 14px 20px; min-height: 48px; border: 1px solid var(--forest-line); border-radius: 3px; font-size: 13px; background: var(--cream); color: var(--midnight); }
+.experience-cards.is-expanded { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.experience-cards.is-expanded .experience-card-copy { padding: 20px; }
+.experience-cards.is-expanded .experience-card-copy h3 { font-size: 26px; }
+.experience-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-block: 8px 26px; }
+.experience-filters button { min-height: 44px; padding: 10px 15px; border: 1px solid var(--forest-line); border-radius: 3px; font-size: 12px; }
+.experience-filters button span { margin-left: 9px; font-size: 10px; opacity: .65; font-variant-numeric: tabular-nums; }
+.experience-filters button[aria-pressed='true'] { background: var(--cream); color: var(--midnight); }
+.experience-collection :is(button,a):focus-visible, .experience-cards:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+
+.experience-viewer { position: fixed; inset: 0; margin: auto; width: min(94vw,1080px); max-height: 94svh; padding: 24px; background: var(--midnight); color: var(--cream); border: 1px solid var(--forest-line); border-radius: 5px; overflow: auto; }
+.experience-viewer.has-photos { height: min(94svh,980px); }
+.experience-viewer[open] { display: flex; flex-direction: column; gap: 12px; }
+.experience-viewer::backdrop { background: rgba(7,14,17,.88); backdrop-filter: blur(12px); }
+.archive-viewer-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; flex-shrink: 0; }
+.archive-viewer-header .eyebrow { font-size: 10px; }
+.archive-viewer-header h3 { font-family: var(--forest-display); font-size: 27px; font-weight: 400; line-height: 1.2; margin-top: 5px; }
+.archive-viewer-header p { font-size: 12px; color: var(--muted); margin-top: 7px; line-height: 1.6; }
+.archive-viewer-close { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--forest-line); border-radius: 50%; flex-shrink: 0; }
+.experience-viewer-description { font-size: 13px; color: var(--muted); line-height: 1.8; max-height: 17svh; overflow-y: auto; flex-shrink: 0; }
+.experience-viewer:not(.has-photos) .experience-viewer-description { max-height: none; }
+.experience-viewer-description h4 { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--cream); margin-bottom: 5px; }
+.experience-skills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.experience-skills span { font-size: 10px; padding: 3px 9px; border: 1px solid var(--forest-line); border-radius: 20px; }
+.archive-viewer-image { position: relative; flex: 1 0 120px; min-height: 120px; background: color-mix(in srgb,var(--deep-navy) 88%,var(--cream) 12%); touch-action: pan-y pinch-zoom; }
+.archive-viewer-image>a { position: absolute; inset: 0; }
+.archive-viewer-navigation { display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; font-size: 12px; font-variant-numeric: tabular-nums; }
+.archive-viewer-navigation button { display: flex; align-items: center; gap: 10px; min-height: 44px; min-width: 44px; }
+.archive-viewer-navigation button:disabled { opacity: .3; }
+.archive-viewer-thumbnails { display: flex; position: relative; flex-shrink: 0; gap: 8px; overflow-x: auto; scrollbar-width: thin; padding: 4px 2px 9px; }
+.archive-viewer-thumbnails button { position: relative; flex: 0 0 64px; height: 54px; border: 1px solid var(--forest-line); opacity: .55; background: var(--deep-navy); }
+.archive-viewer-thumbnails button[aria-current='true'] { opacity: 1; outline: 2px solid var(--cream); outline-offset: 1px; }
+.archive-viewer-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 11px; color: var(--muted); flex-shrink: 0; }
+.archive-viewer-footer a { display: inline-flex; align-items: center; gap: 5px; min-height: 32px; color: var(--cream); }
+@media (hover:hover) {
+  .experience-card:hover { border-color: color-mix(in srgb,var(--cream) 45%,transparent); }
+  .experience-card-thumbnails :is(button,a):hover, .archive-viewer-thumbnails button:hover { outline: 1px solid var(--cream); opacity: 1; }
+  .experience-detail-link:hover { background: var(--cream); color: var(--midnight); }
+}
+@media (max-width:1000px) { .experience-cards.is-expanded { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width:600px) {
+  .experience-collection-top { align-items: flex-start; gap: 15px; }
+  .experience-collection-top .eyebrow { font-size: 11px; }
+  .experience-collection-top>span:last-child { max-width: 120px; font-size: 10px; text-align: right; line-height: 1.7; }
+  .experience-cards.is-drifting { gap: 16px; }
+  .experience-cards.is-drifting .experience-card { flex-basis: 88%; }
+  .experience-card-copy { padding: 18px; }
+  .experience-card-copy h3 { font-size: 26px; }
+  .experience-card-meta { font-size: 9px; }
+  .experience-cards.is-expanded { grid-template-columns: minmax(0,1fr); }
+  .experience-collection-hint { font-size: 11px; }
+  .experience-rail-controls { margin-right: 0; margin-left: auto; }
+  .experience-more { width: 100%; }
+  .experience-viewer { padding: 14px; }
+  .experience-viewer[open] { gap: 9px; }
+  .archive-viewer-header h3 { font-size: 22px; }
+  .archive-viewer-header p { font-size: 11px; }
+  .archive-viewer-footer { font-size: 10px; }
+}
