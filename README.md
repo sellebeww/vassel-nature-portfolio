@@ -1,4 +1,4 @@
-# Vassel Goleyu — Portfolio
+# 🌿 Vassel Goleyu Portofolio (Nature Vibe) 🍃
 
 Personal portfolio website for Vassel Goleyu, built with Next.js. Showcases experience, achievements, projects, and a downloadable CV through a forest-inspired, day/night themed interface with animated wildlife and scenery.
 
