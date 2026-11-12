@@ -1,5 +1,5 @@
-/** Edited from the Summary in the supplied Profile.pdf, supported by its roles. */
+/** Aligned with the Profile section of Vassel's CV. */
 export const profileSummary = [
-  "I’m Vassel, an Informatics student at Universitas Multimedia Nusantara and a full stack developer. I’m naturally curious and attentive to small details, combining thoughtful problem-solving with a creative perspective on the things I build.",
-  "I enjoy work that brings technology and people together. Whether I’m developing a web application, guiding a student organization, hosting an event, or supporting campus care, I aim to stay thoughtful, communicate clearly, and make a meaningful contribution. I value learning from different perspectives and turning ideas into experiences that help others.",
+  "I’m Vassel, an Informatics student at Universitas Multimedia Nusantara who ships real software across web, mobile and AI. I build secure, scalable web apps with Laravel, React and REST APIs, and explore AI and smart-contract security on the side.",
+  "I also lead student organizations and events that reach 500+ participants, so ideas get built and delivered on time. I value learning from different perspectives and turning ideas into experiences that help others.",
 ];

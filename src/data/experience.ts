@@ -71,6 +71,17 @@ export const experience: ExperienceItem[] = [
     showAvatar: true,
   },
   {
+    id: "bem-frontend-developer",
+    period: "Nov 2026 — Present",
+    title: "Frontend Developer",
+    org: "BEM UMN",
+    type: "development",
+    description:
+      "Building and maintaining responsive, user-focused front-end interfaces for the student body's digital platforms.",
+    tags: ["Frontend", "Responsive UI", "Student Platforms"],
+    verified: true,
+  },
+  {
     id: "mister-miss-umn-supervisor",
     period: "Jan 2026 — Present",
     title: "Supervisor, Mister & Miss UMN",

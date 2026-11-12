@@ -17,6 +17,7 @@ const recordIds: Record<string, string> = {
 };
 // Concise introductions describe confirmed roles without inventing outcomes or dates.
 const summaries: Record<string, string> = {
+  "bem-frontend": "Building responsive, user-focused interfaces for the student body's digital platforms.",
   "bem-supervisor": "Shaping the annual theme and guiding the committee from the Grand Design to each program.",
   "duta-anti-narkoba": "Leading anti-drug advocacy through school outreach, donation drives, and community programs.",
   "medical-developer": "Building responsive web applications with Laravel, API integrations, and secure user access.",
@@ -40,7 +41,7 @@ const stories: ExperienceStory[] = experienceAlbums.map(album => {
     tags: record?.tags || [], coverIndex: covers[album.id] || 0 };
 });
 
-export const featuredExperienceIds = ["bem-supervisor", "duta-anti-narkoba", "medical-developer", "unity-2025", "garuda-hacks", "omb-2025"];
+export const featuredExperienceIds = ["bem-frontend", "bem-supervisor", "duta-anti-narkoba", "medical-developer", "unity-2025", "garuda-hacks", "omb-2025"];
 export const experienceStories = [...stories].sort((a, b) => {
   const rank = (id: string) => { const index = featuredExperienceIds.indexOf(id); return index < 0 ? featuredExperienceIds.length : index; };
   return rank(a.id) - rank(b.id);

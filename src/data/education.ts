@@ -42,5 +42,3 @@ export const languages: { name: string; level: string }[] = [
   { name: "Indonesian", level: "Native" },
   { name: "English", level: "Professional Working Proficiency" },
 ];
-
-export const interests: string[] = [];

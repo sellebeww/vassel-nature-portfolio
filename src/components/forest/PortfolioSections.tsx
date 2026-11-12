@@ -3,6 +3,7 @@ import { ArrowDownToLine, ArrowUpRight, Code2, Sprout, Compass } from "lucide-re
 import { socialLinks } from "@/data/socials";
 import { education } from "@/data/education";
 import { profileSummary } from "@/data/profile";
+import { skills } from "@/data/skills";
 
 export function Chapter({ number, children }: { number: string; children: React.ReactNode }) {
   return <div className="forest-chapter"><span>{number}</span><span className="chapter-line" /><span>{children}</span></div>;
@@ -15,6 +16,7 @@ export function AboutSection() {
       <div className="about-portrait"><div className="portrait-frame"><Image src="/images/profile/vassel-goleyu.jpg" alt="Vassel Goleyu" fill sizes="(max-width: 700px) 80vw, 360px" className="portrait-image" /><span className="portrait-corner top-left" /><span className="portrait-corner bottom-right" /></div><div className="portrait-caption"><span>VASSEL GOLEYU</span><span>Always a work in progress ↗</span></div></div>
       <div className="about-copy"><span className="eyebrow">A little about me</span><h2 id="about-title">Rooted in technology.<br /><em>Driven by curiosity.</em></h2>{profileSummary.map(paragraph => <p key={paragraph}>{paragraph}</p>)}<div className="about-values"><span><Code2 size={15} /> Attentive to detail</span><span><Compass size={15} /> Curious & creative</span><span><Sprout size={15} /> People-minded</span></div><a className="forest-text-link" href="/files/vassel-goleyu-cv.pdf" download>Take a look at my CV <ArrowDownToLine size={15} /></a></div>
     </div>
+    <dl className="about-skills" data-reveal="text">{skills.map(skill => <div key={skill.group}><dt>{skill.group}</dt><dd>{skill.items}</dd></div>)}</dl>
     <div className="about-education"><span className="eyebrow">Currently growing at</span><div><strong>{education[0].institution}</strong><span>{education[0].program}</span></div><span>{education[0].period}</span></div>
   </section>;
 }

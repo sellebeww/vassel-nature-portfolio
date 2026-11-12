@@ -152,14 +152,3 @@ export const achievements: Achievement[] = [
     image: "/images/achievements/achievement-09-biology-gold-2022.jpg",
   },
 ];
-
-export const achievementCategories: (AchievementCategory | "All")[] = [
-  "All",
-  "Leadership",
-  "Geography",
-  "Biology",
-  "Mathematics",
-  "English",
-];
-
-export const achievementYears = [2024, 2023, 2022] as const;

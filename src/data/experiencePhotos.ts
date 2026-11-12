@@ -35,6 +35,7 @@ function album(id: string, title: string, role: string, category: PhotoCategory,
 
 /** Every supplied photograph is retained in its original order within its album. */
 export const experienceAlbums: ExperienceAlbum[] = [
+  album("bem-frontend", "BEM UMN Digital Platforms", "Frontend Developer · BEM UMN", "Development", []),
   album("duta-anti-narkoba", "Duta Anti Narkoba UMN", "President", "Leadership", [
     "Duta Anti Narkoba UMN members together in a campus auditorium",
     "Duta Anti Narkoba UMN gathering in front of a congratulatory presentation",
